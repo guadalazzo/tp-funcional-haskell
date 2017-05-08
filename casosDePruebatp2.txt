@@ -1,0 +1,56 @@
+Punto 1b
+Marcos toma una soda de nivel 3 y queda con 2 bebidas
+Marcos toma una soda de nivel 3 y queda con 40 de resistencia
+
+ tomar (soda 3) marcos
+Cliente {nombre = "errrpMarcos", resistencia = 40, amigos = [Cliente {nombre = "Rodri", resistencia = 55, amigos = [], bebidas = [<function>]}], bebidas = [<function>,<function>]}
+
+Punto 1c
+Rodri toma una soda de nivel 1 y una soda de nivel 2 y queda con nombre errperpRodri
+Marcos toma un klusener de huevo, un tintico y una jarraLoca y queda con 30 de resistencia
+Marcos toma un klusener de huevo, un tintico y una jarraLoca y queda con 4 bebidas en el historial
+
+ tomarTragos [soda 1, soda 2] rodri
+Cliente {nombre = "errperpRodri", resistencia = 55, amigos = [], bebidas = [<function>,<function>,<function>]}
+
+tomarTragos [klusener "huevo",tintico,jarraloca] marcos
+Cliente {nombre = "Marcos", resistencia = 30, amigos = [Cliente {nombre = "Rodri", resistencia = 45, amigos = [], bebidas = [<function>]}], bebidas = [<function>,<function>,<function>,<function>]}
+
+Punto 1d
+Ana pide “dame otro” y debe dar error
+Marcos pide “dame otro” y tiene 2 bebidas en el historial
+Marcos pide “dame otro” y lo deja con 34 de resistencia
+Rodri toma una soda de nivel 1, y "dameOtro" da como resultado que tiene 3 bebidas
+Rodri toma una soda de nivel 1, y "dameOtro" da como resultado que su nombre queda “erperpRodri”
+
+ dameOtro ana
+*** Exception: Prelude.last: empty list
+
+dameOtro marcos
+Cliente {nombre = "Marcos", resistencia = 34, amigos = [Cliente {nombre = "Rodri", resistencia = 55, amigos = [], bebidas = [<function>]}], bebidas = [<function>,<function>]}
+
+ tomarTragos [soda 1, dameOtro] rodri
+Cliente {nombre = "erperpRodri", resistencia = 55, amigos = [], bebidas = [<function>,<function>,<function>]}
+
+Punto 2b
+Rodri puede tomar dos bebidas, entre un grog XD, un tintico y un klusener de frutilla
+Entre un grog XD, un tintico, un klusener de "fruuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuutilla" se puede tomar una sola bebida
+
+cuantasPuedeTomar rodri [grogxd,tintico,klusener "frutilla"]
+2
+
+ cuantasPuedeTomar rodri [grogxd,tintico,klusener "fruuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuutilla"]
+1
+
+Punto 3b
+Rodri hace una salida de amigos y debe quedar con un amigo
+Rodri hace una salida de amigos y se debe llamar “erpRodri”
+Rodri hace una salida de amigos y debe quedar con 45 de resistencia
+Rodri hace una salida de amigos y su primer y único amigo Roberto Carlos debe quedar con 155 de resistencia
+Rodri hace una salida de amigos y debe quedar con 4 bebidas en su historial
+
+  itinerario salidaDeAmigos rodri
+Cliente {nombre = "erpRodri", resistencia = 45, amigos = [Cliente {nombre = "Roberto Carlos", resistencia = 155, amigos = [], bebidas = []}], bebidas = [<function>,<function>,<function>,<function>]}
+
+
+
