@@ -13,6 +13,7 @@ marcos = Cliente {nombre="Marcos", resistencia=40 ,amigos=[rodri], bebidas=[klus
 cristian = Cliente {nombre="Cristian", resistencia=2 ,amigos=[], bebidas=[grogxd,jarraloca]}
 ana = Cliente {nombre="Ana", resistencia=120 ,amigos=[marcos,rodri], bebidas=[]}
 robertoCarlos = Cliente { nombre="Roberto Carlos", resistencia=165, amigos=[], bebidas=[]}
+chuckNorris = Cliente {nombre="Chuck", resistencia=1000, amigos=[ana], bebidas=[]}
 
 --itinerarios:
 mezclaExplosiva = Intinerario{horas=2.5,acciones=[tomar grogxd,tomar grogxd,tomar (klusener "huevo"),tomar (klusener "frutilla")]}
