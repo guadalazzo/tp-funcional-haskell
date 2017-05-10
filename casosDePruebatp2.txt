@@ -52,5 +52,26 @@ Rodri hace una salida de amigos y debe quedar con 4 bebidas en su historial
   itinerario salidaDeAmigos rodri
 Cliente {nombre = "erpRodri", resistencia = 45, amigos = [Cliente {nombre = "Roberto Carlos", resistencia = 155, amigos = [], bebidas = []}], bebidas = [<function>,<function>,<function>,<function>]}
 
+Punto 4a
+la intensidad de la mezcla explosiva es 1.6
+la intensidad de la salidaDeAmigos es 4.0
+la intensidad del itinerario basico es 0.8
 
+calcularIntensidad mezclaExplosiva
+1.6
+
+calcularIntensidad salidaDeAmigos
+4.0
+
+calcularIntensidad itinerarioBasico
+0.8
+
+Punto 4b
+Entre la salida de amigos, la mezcla explosiva y el itinerario básico, el itinerario más intenso es la salida de amigos (tip: se puede reconocer por el nombre)
+Rodri hace el itinerario más intenso entre una salida de amigos, la mezcla explosiva y el itinerario básico y queda con el nombre "erpRodri"
+Rodri hace el itinerario más intenso entre una salida de amigos, la mezcla explosiva y el itinerario básico y queda con resistencia 45
+Rodri hace el itinerario más intenso entre una salida de amigos, la mezcla explosiva y el itinerario básico y queda con un amigo: Roberto Carlos
+
+elegirMasIntenso [itinerarioBasico, mezclaExplosiva, salidaDeAmigos] rodri
+Cliente {nombre = "erpRodri", resistencia = 45, amigos = [Cliente {nombre = "Roberto Carlos", resistencia = 155, amigos = [], bebidas = []}], bebidas = [<function>,<function>,<function>,<function>]}
 
