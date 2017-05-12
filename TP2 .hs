@@ -3,7 +3,7 @@ import Data.List
 type Bebida = Cliente->Cliente
 type Acciones = Cliente->Cliente 
 data Cliente = Cliente {nombre::String, resistencia::Int, amigos::[Cliente],bebidas::[Bebida]} deriving (Show)
-data Intinerario = Intinerario{horas::Float, acciones::[Acciones]}
+data Intinerario = Intinerario{horas::Float, acciones::[Acciones]} deriving(Show)
 
 --Decidimos utilizar este tipo de dato "data" porque es más declarativo e intuitivo que el tipo de data tuplas, y además 
 --cualquier persona que lea el tipo de dato, puede identificar a que tipo de dato corresponde cada elemento de la "data Cliente".
@@ -82,3 +82,13 @@ itinerario (Intinerario h  (f:fs)) cliente = itinerario (Intinerario h  (fs)) (f
 itinerario (Intinerario _  [] )cliente = cliente
 
 calcularIntensidad itinerario = genericLength (acciones itinerario) / horas itinerario
+quicksort :: (Ord a) => [a] -> [a]
+quicksort [] = []
+quicksort (x:xs) =
+    let smallerSorted = quicksort [a | a <- xs, a <= x]
+        biggerSorted  = quicksort [a | a <- xs, a > x]
+    in  smallerSorted ++ [x] ++ biggerSorted
+
+--hacerItinerarioMasIntenso itinerarios cliente = (head((quicksort.calcularIntensidad) itinerarios)) cliente
+--hacerItinerarioMasIntenso [mezclaExplosiva, itinerarioBasico] ana
+--mezclaExplosiva ana 
