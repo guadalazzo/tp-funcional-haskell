@@ -1,4 +1,5 @@
 import Text.Show.Functions
+import Data.List
 type Bebida = Cliente->Cliente
 type Acciones = Cliente->Cliente 
 data Cliente = Cliente {nombre::String, resistencia::Int, amigos::[Cliente],bebidas::[Bebida]} deriving (Show)
@@ -55,6 +56,7 @@ erepea fuerza = "e"++ (replicate fuerza 'r') ++ "p"
 
 --punto 1
 tomar f cliente = (f cliente){bebidas=(bebidas cliente) ++ [f]} 
+--1)c)
 tomarTragos (f:fs) cliente = tomarTragos fs (tomar f cliente) 
 tomarTragos [] cliente = cliente
 
@@ -62,19 +64,21 @@ cantidadBebidas cliente = (length.bebidas)cliente
 ultimaBebida cliente=(last.bebidas)cliente
 
 
-
+--1)d)
 dameOtro cliente = ((tomar.ultimaBebida) cliente) cliente 
 
 puedeTomar cliente trago = resistencia (tomar trago cliente) >0 
+--2)a)
 cualesPuedeTomar cliente tragos = filter(puedeTomar cliente) tragos 
+--2)b)
 cuantasPuedeTomar cliente tragos = (length.cualesPuedeTomar cliente)  tragos 
+
 rescatarse horas 
     | horas > 3 = subirResistencia 200 
     | otherwise = subirResistencia 100  
 
 
-
 itinerario (Intinerario h  (f:fs)) cliente = itinerario (Intinerario h  (fs)) (f cliente)
 itinerario (Intinerario _  [] )cliente = cliente
 
---calcularIntensidad itinerario = length (acciones itinerario) / horas itinerario
+calcularIntensidad itinerario = genericLength (acciones itinerario) / horas itinerario
