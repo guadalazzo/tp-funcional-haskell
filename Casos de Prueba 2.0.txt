@@ -73,6 +73,10 @@ Rodri hace el itinerario más intenso entre una salida de amigos, la mezcla expl
 Rodri hace el itinerario más intenso entre una salida de amigos, la mezcla explosiva y el itinerario básico y queda con resistencia 45
 Rodri hace el itinerario más intenso entre una salida de amigos, la mezcla explosiva y el itinerario básico y queda con un amigo: Roberto Carlos
 
+itinerarioMasIntenso [salidaDeAmigos, itinerarioBasico ,mezclaExplosiva]
+Itinerario {nombreItinerario = "Salida De Amigos", horas = 1.0, acciones = [<function>,<function>,<function>,<function>]}
+
+
 elegirMasIntenso [itinerarioBasico, mezclaExplosiva, salidaDeAmigos] rodri
 Cliente {nombre = "erpRodri", resistencia = 45, amigos = [Cliente {nombre = "Roberto Carlos", resistencia = 155, amigos = [], bebidas = []}], bebidas = [<function>,<function>,<function>,<function>]}
 
