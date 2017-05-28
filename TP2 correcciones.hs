@@ -31,6 +31,7 @@ reconocerAmigo amigo cliente
     |puedeAgregar cliente amigo = agregarAmigo cliente amigo
     |otherwise = cliente
 
+
 comoEsta cliente 
     |  ((>50).resistencia) cliente = "fresco"
     | ((>1).length.amigos) cliente = "piola"
@@ -86,9 +87,9 @@ calcularIntensidad itinerario = (((/ horas itinerario).genericLength.acciones) i
 masIntenso itinerario otroItinerario  | calcularIntensidad itinerario > calcularIntensidad otroItinerario = itinerario
                                       | otherwise = otroItinerario
 
-itineraioMasIntenso listaItinerarios = foldl1 masIntenso listaItinerarios
+itinerarioMasIntenso listaItinerarios = foldl1 masIntenso listaItinerarios
 
-elegirMasIntenso listaItinerarios = (itinerario.itineraioMasIntenso) listaItinerarios 
+elegirMasIntenso listaItinerarios = (itinerario.itinerarioMasIntenso) listaItinerarios 
 
 --Punto 5
 sodasInfinitas n =  soda n : sodasInfinitas (n+1)
