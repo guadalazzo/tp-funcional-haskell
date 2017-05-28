@@ -49,7 +49,7 @@ Rodri hace una salida de amigos y debe quedar con 45 de resistencia
 Rodri hace una salida de amigos y su primer y único amigo Roberto Carlos debe quedar con 155 de resistencia
 Rodri hace una salida de amigos y debe quedar con 4 bebidas en su historial
 
-  itinerario salidaDeAmigos rodri
+itinerario salidaDeAmigos rodri
 Cliente {nombre = "erpRodri", resistencia = 45, amigos = [Cliente {nombre = "Roberto Carlos", resistencia = 155, amigos = [], bebidas = []}], bebidas = [<function>,<function>,<function>,<function>]}
 
 
@@ -75,6 +75,7 @@ Rodri hace el itinerario más intenso entre una salida de amigos, la mezcla expl
 
 elegirMasIntenso [itinerarioBasico, mezclaExplosiva, salidaDeAmigos] rodri
 Cliente {nombre = "erpRodri", resistencia = 45, amigos = [Cliente {nombre = "Roberto Carlos", resistencia = 155, amigos = [], bebidas = []}], bebidas = [<function>,<function>,<function>,<function>]}
+
 
 Justificar: ¿Puede chuckNorris pedir otro trago con la función dameOtro?
 -No, no puede ya que la funcion no va a ser capaz de encontrar la ultima bebida que se tomo.
